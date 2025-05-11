@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbearia do Ailton</title>
+    <link rel="shortcut icon" href="../penteado.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <h1>Barbearia do Ailton</h1>
+    <main>
+    <div class="container">
+        <h2 id="boasVindas"></h2>
+        <p>Continue seu agendamento:</p>
+
+        <input type="date" id="data">
+        <input type="time" id="horario">
+
+        <label for="servico" id="serv">Escolha o serviço:</label>
+        <select id="servico" required>
+            <option value="">Selecione</option>
+            <option value="barba">Barba</option>
+            <option value="cabelo">Cabelo</option>
+            <option value="barba_cabelo">Barba e Cabelo</option>
+        </select>
+
+    <button onclick="agendar()">Agendar</button>
+    </div>
+</main>
+
+    <script>
+         window.onload = function() {
+      const nomeSalvo = localStorage.getItem('usuarioNome');
+      if (nomeSalvo) {
+        document.getElementById('boasVindas').textContent = 'Olá, ' + nomeSalvo + '! Seja bem-vindo à barbearia!';
+      } else {
+        document.getElementById('boasVindas').textContent = 'Olá! Seja bem-vindo à barbearia!';
+      }
+    }
+
+  function agendar() {
+    const data = document.getElementById('data').value;
+    const horario = document.getElementById('horario').value;
+    const servico = document.getElementById('servico').value;
+
+    if (!data || !horario || !servico) {
+      alert('Por favor, preencha todos os campos!');
+      return;
+    }
+
+    // Salva no localStorage
+    localStorage.setItem('agendamentoData', data);
+    localStorage.setItem('agendamentoHorario', horario);
+    localStorage.setItem('agendamentoServico', servico);
+
+    alert('Agendamento salvo com sucesso!');
+    window.location.href = '../pag02/index.html';
+  }
+    </script>
+    
+</body>
+</html>
