@@ -51,3 +51,12 @@ button:hover{
     background-color: rgb(11, 233, 11);
     color: black;
 }
+
+@media (max-width: 700px){
+    div#container{
+        width: 95%;
+        height: 60%;
+
+    }
+
+}
