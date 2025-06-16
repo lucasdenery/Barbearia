@@ -9,8 +9,14 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  background-image: url(../image\ 1.png);
+  background-repeat: no-repeat;
+  background-size:cover;
 }
 
+.header{
+  background-color:#6E9987 ;
+}
 .container {
    background-color:#e0e4ce;
     width: 350px;
