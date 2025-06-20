@@ -8,7 +8,7 @@
     <title>Barbearia do Ailton</title>
 </head>
 <body>
-    <h1>Barbearia do Ailton</h1>
+    <img src="../logo.png" alt="">
     <main>
         <div class="container">
             <h3>Resumo do seu agendamento:</h3>
@@ -22,25 +22,6 @@
         </div>
     </main>
 
-    <script>
-        // Quando a página carrega, pega os dados salvos do localStorage
-        window.onload = function() {
-            const servico = localStorage.getItem('agendamentoServico');
-            const data = localStorage.getItem('agendamentoData');
-            const horario = localStorage.getItem('agendamentoHorario');
-
-            // Exibe os dados na página
-            document.getElementById('servicoAgendado').textContent = servico;
-            document.getElementById('dataAgendada').textContent = data;
-            document.getElementById('horarioAgendado').textContent = horario;
-        }
-
-        // Função para confirmar agendamento
-        function confirmarAgendamento() {
-            alert('Agendamento confirmado com sucesso!');
-            // Aqui você pode adicionar uma lógica para salvar em um banco ou enviar para uma API
-        }
-    </script>
     
 </body>
 </html>

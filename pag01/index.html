@@ -1,68 +1,57 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Serviços</title>
-    <link rel="shortcut icon" href="../penteado.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Serviços</title>
+  <link rel="shortcut icon" href="../penteado.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <header class="header">
-    <img src="../logo.png" alt="">
 
-  </header>
-  
-    <main>
+  <main>
     <div class="container">
-        <h2 id="boasVindas"></h2>
-        <p>Continue seu agendamento:</p>
+      <div class="fundo-logo"><img src="../logo.png" alt="" class="logo"></div>
 
-        <input type="date" id="data">
-        <input type="time" id="horario">
+      <div class="icones">
+        <img src="../contato.png" alt="" class="conta">
+        <img src="../localização.png" alt="" class="local">
+      </div>
 
-        <label for="servico" id="serv">Escolha o serviço:</label>
-        <select id="servico" required>
-            <option value="">Selecione</option>
-            <option value="barba">Barba</option>
-            <option value="cabelo">Cabelo</option>
-            <option value="barba_cabelo">Barba e Cabelo</option>
-        </select>
+      <div class="profissional">
+        <h2>Escolha seu profissional:</h2>
+        <input type="password" placeholder="Digite..">
 
-    <button onclick="agendar()">Agendar</button>
+      </div>
+
+      <div class="servicos">
+        <h2>Serviços:</h2>
+        <div id="cabelo">
+          <img src="../cabelo.jpg" alt="" id="cabelo"> 
+
+        </div>
+        <div >
+          <img src="../barba.png" alt=" " id="barba">
+
+        </div>
+        <div >
+          <img src="../barba-cabelo.png" alt="" id="cabelo-barba">
+
+        </div>
+        <button>Enviar</button>
+
+      </div>
+
+
+
+
     </div>
-</main>
+  </main>
 
-    <script>
-         window.onload = function() {
-      const nomeSalvo = localStorage.getItem('usuarioNome');
-      if (nomeSalvo) {
-        document.getElementById('boasVindas').textContent = 'Olá, ' + nomeSalvo + '! Seja bem-vindo à barbearia!';
-      } else {
-        document.getElementById('boasVindas').textContent = 'Olá! Seja bem-vindo à barbearia!';
-      }
-    }
 
-  function agendar() {
-    const data = document.getElementById('data').value;
-    const horario = document.getElementById('horario').value;
-    const servico = document.getElementById('servico').value;
-
-    if (!data || !horario || !servico) {
-      alert('Por favor, preencha todos os campos!');
-      return;
-    }
-
-    // Salva no localStorage
-    localStorage.setItem('agendamentoData', data);
-    localStorage.setItem('agendamentoHorario', horario);
-    localStorage.setItem('agendamentoServico', servico);
-
-    alert('Agendamento salvo com sucesso!');
-    window.location.href = '../pag02/index.html';
-  }
-    </script>
-    
 </body>
+
 </html>
