@@ -56,40 +56,37 @@ body {
   height: 100px;
 }
 
-
-
-#cabelo{
-  height: 70px;
-  margin: 2px;
-  margin-bottom: 8px;
-  width: 99%;
-}
-#cabelo:hover{
- background-color: #333;
-}
-#barba{
-  height: 70px;
-   margin: 2px;
-  margin-bottom: 8px;
-  width: 99%;
-
+.servicos div {
+    display: flex;
+    align-items: center; /* Alinha verticalmente ao centro */
+    gap: 10px; /* Espaçamento entre imagem e botão */
+    margin-bottom: 10px; /* Espaço entre os blocos */
 }
 
-#barba:hover{
-   background-color: #333;
+.servicos img {
+    width: 350px; /* Ajuste o tamanho conforme preferir */
+    height: auto;
 }
 
-#cabelo-barba{
-  height: 76px;
-   margin: 2px;
-  margin-bottom: 8px;
-  width: 99%;
+.servicos button {
+    padding: 8px 12px;
+   background-color: green;
+    color: white; /* Cor do texto */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-#cabelo-barba:hover{
-    background-color: #333;
-
+.servicos button:hover {
+   background-color: rgb(11, 233, 11);
 }
+
+
+
+
+
+
+
 h2 {
   color: #333;
   margin-bottom: 20px;
@@ -104,8 +101,7 @@ p {
 
 
 
-input,
-select {
+input{
   width: 90%;
   padding: 10px;
   margin-bottom: 15px;
@@ -117,7 +113,7 @@ select {
 
 
 
-button {
+#button {
 
   margin-left: 10%;
   width: 80%;
@@ -131,5 +127,9 @@ button {
 
 button:hover {
   background-color: rgb(11, 233, 11);
-  color: black;
+  color:white;
+}
+
+#button:hover{
+     background-color: rgb(11, 233, 11);
 }

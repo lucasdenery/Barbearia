@@ -1,27 +1,67 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../penteado.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <title>Barbearia do Ailton</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agendamento</title>
+  <link rel="shortcut icon" href="../penteado.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    a{
+      color: white;
+    }
+  </style>
+  
 </head>
+
 <body>
-    <img src="../logo.png" alt="">
-    <main>
-        <div class="container">
-            <h3>Resumo do seu agendamento:</h3>
 
-            <p><strong>Serviço escolhido:</strong> <span id="servicoAgendado"></span></p>
-            <p><strong>Data:</strong> <span id="dataAgendada"></span></p>
-            <p><strong>Horário:</strong> <span id="horarioAgendado"></span></p>
+  <main>
+    
 
-            <button onclick="confirmarAgendamento()">Confirmar Agendamento</button>
-            <a href="../index.html"><button>Realizar novo agendamento</button></a>
-        </div>
-    </main>
+    <div class="container">
+     <img src="../logo.png" alt="">
+
+      <h2>Agendamento:</h2>
+
+      <form>
+
+        
+        <p>Escolha a data:</p>
+        <input type="date" id="data" name="data" >
 
     
+        <p>Escolha o horário:</p>
+        <select id="hora" name="hora">
+          <option value="">Selecione o horário</option>
+          <option>09:00</option>
+          <option>10:00</option>
+          <option>11:00</option>
+          <option>13:00</option>
+          <option>14:00</option>
+          <option>15:00</option>
+          <option>16:00</option>
+          <option>17:00</option>
+        </select>
+
+       
+       <p>Forma de pagamento:</p>
+        <select id="pagamento" name="pagamento">
+          <option value="">Selecione a forma de pagamento</option>
+          <option>Dinheiro</option>
+          <option>Pix</option>
+          <option>Cartão de crédito</option>
+          <option>Cartão de débito</option>
+        </select>
+
+        
+        <button id="button"><a href="../finalizar/index.html">Confirmar Agendamento</a></button>
+
+      </form>
+    </div>
+  </main>
+
 </body>
+
 </html>

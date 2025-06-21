@@ -65,13 +65,8 @@ button:hover {
     color: black;
 }
 
-.cada {}
-
-@media (max-width: 700px) {
-    div#container {
-        width: 95%;
-        height: 60%;
-
-    }
-
+.a{
+    color: white;
 }
+
+
